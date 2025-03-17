@@ -1,5 +1,8 @@
 {pkgs, ...}: {
-  imports = [./hardware-configuration.nix];
+  imports = [
+    ./hardware.nix
+    ./disk.nix
+  ];
 
   # Enable Bootloader
   system.boot.efi.enable = true;
