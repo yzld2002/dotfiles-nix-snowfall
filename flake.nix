@@ -29,7 +29,7 @@
           title = "dotfiles";
         };
 
-        namespace = "yzld2002";
+        namespace = "custom";
       };
 
       channels-config = {
