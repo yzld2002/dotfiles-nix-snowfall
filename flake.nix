@@ -12,13 +12,14 @@
     };
     nixos-generators.url = "github:nix-community/nixos-generators";
     nixos-generators.inputs.nixpkgs.follows = "nixpkgs";
+    disko.url = "github:nix-community/disko";
 
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs: let
-    lib = inputs.snowfall-lib.mkLib {
+  outputs = inputs:
+    inputs.snowfall-lib.mkFlake {
       inherit inputs;
       src = ./.;
 
@@ -28,13 +29,8 @@
           title = "dotfiles";
         };
 
-        namespace = "custom";
+        namespace = "yzld2002";
       };
-    };
-  in
-    lib.mkFlake {
-      inherit inputs;
-      src = ./.;
 
       channels-config = {
         allowUnfree = true;
@@ -42,7 +38,11 @@
 
       overlays = with inputs; [];
 
-      systems.modules.nixos = with inputs; [];
+      systems.modules.nixos = with inputs; [
+        disko.nixosModules.disko
+      ];
+
+      homes.modules = with inputs; [];
 
       templates = import ./templates {};
     };
