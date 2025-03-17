@@ -20,7 +20,7 @@ in {
     };
 
     users.users = let 
-        publicKey = ""; # Enter your ssh public key
+        publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3dHygJrJv/ZqC1Y8NhpghQK4hMTuacdJhcXtvfG7dN yzld2002@gmail.com"; # Enter your ssh public key
     in
     {
       root.openssh.authorizedKeys.keys = [
