@@ -7,5 +7,6 @@
 }: {
     homes.packages = with pkgs; [
       fastfetch
+      btop
     ]
 }
