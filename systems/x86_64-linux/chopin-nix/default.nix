@@ -10,6 +10,7 @@
 
   environment.systemPackages = with pkgs; [
     # Any particular packages only for this host
+    curl
   ];
 
   suites.server.enable = true;
