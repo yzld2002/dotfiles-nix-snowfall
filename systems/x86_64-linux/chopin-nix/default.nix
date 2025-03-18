@@ -10,10 +10,9 @@
 
   environment.systemPackages = with pkgs; [
     # Any particular packages only for this host
-    fastfetch
   ];
 
-  services.ssh.enable = true;
+  suites.server.enable = true;
 
   # ======================== DO NOT CHANGE THIS ========================
   system.stateVersion = "24.05";
