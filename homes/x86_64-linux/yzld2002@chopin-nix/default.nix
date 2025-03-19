@@ -10,4 +10,5 @@
       fastfetch
       btop
     ];
+    apps.misc.enable = true;
 }
