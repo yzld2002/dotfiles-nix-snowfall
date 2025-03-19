@@ -11,4 +11,5 @@
       btop
     ];
     apps.misc.enable = true;
+    apps.tools.direnv.enable = true;
 }
