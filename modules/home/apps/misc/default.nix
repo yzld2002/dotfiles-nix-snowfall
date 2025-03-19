@@ -27,8 +27,6 @@ in {
       unzip
       sshfs
       btop
-      ffmpeg
-      python3
     ];
   };
 }
