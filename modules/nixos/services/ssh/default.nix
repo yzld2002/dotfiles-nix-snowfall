@@ -30,9 +30,5 @@ in {
         publicKey
       ];
     };
-
-    home.file.".ssh/config".text = ''
-      identityfile ~/.ssh/key 
-    '';
   };
 }

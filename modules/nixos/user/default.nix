@@ -62,6 +62,6 @@ in {
         extraGroups =
           ["wheel" "audio" "sound" "video" "networkmanager" "input" "tty" "docker"]
           ++ cfg.extraGroups;
-      }
+      };
   };
 }
