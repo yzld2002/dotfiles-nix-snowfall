@@ -5,7 +5,7 @@
   lib,
   ...
 }: {
-    packages = with pkgs; [
+    home.packages = with pkgs; [
       fastfetch
       btop
     ];
