@@ -19,6 +19,6 @@ in {
       enableNushellIntegration = true;
     };
 
-    environment.sessionVariables.DIRENV_LOG_FORMAT = ""; # Blank so direnv will shut up
+    home.sessionVariables.DIRENV_LOG_FORMAT = ""; # Blank so direnv will shut up
   };
 }
