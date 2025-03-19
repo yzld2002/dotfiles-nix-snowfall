@@ -52,21 +52,6 @@ in {
 
     environment.sessionVariables.FLAKE = "/home/yzld2002/dotfiles-nix-snowfall";
 
-    home = {
-      file = {
-        "Documents/.keep".text = "";
-        "Downloads/.keep".text = "";
-        "Music/.keep".text = "";
-        "Pictures/.keep".text = "";
-        "dev/.keep".text = "";
-        ".face".source = cfg.icon;
-        "Pictures/${
-          cfg.icon.fileName or (builtins.baseNameOf cfg.icon)
-        }".source =
-          cfg.icon;
-      };
-    };
-
     users.users.${cfg.name} =
       {
         isNormalUser = true;
@@ -77,7 +62,21 @@ in {
         extraGroups =
           ["wheel" "audio" "sound" "video" "networkmanager" "input" "tty" "docker"]
           ++ cfg.extraGroups;
+
+        home = {
+          file = {
+            "Documents/.keep".text = "";
+            "Downloads/.keep".text = "";
+            "Music/.keep".text = "";
+            "Pictures/.keep".text = "";
+            "dev/.keep".text = "";
+            ".face".source = cfg.icon;
+            "Pictures/${
+              cfg.icon.fileName or (builtins.baseNameOf cfg.icon)
+            }".source =
+              cfg.icon;
+          };
+        };
       }
-      // cfg.extraOptions;
   };
 }
