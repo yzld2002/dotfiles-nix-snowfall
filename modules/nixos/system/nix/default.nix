@@ -37,11 +37,7 @@ in {
           auto-optimise-store = true;
           trusted-users = users;
           allowed-users = users;
-        }
-        // (lib.optionalAttrs config.apps.tools.direnv.enable {
-          keep-outputs = true;
-          keep-derivations = true;
-        });
+        };
 
       gc = {
         automatic = true;
