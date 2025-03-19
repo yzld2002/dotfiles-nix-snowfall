@@ -13,12 +13,12 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.programs.direnv = {
+    programs.direnv = {
       enable = true;
       nix-direnv.enable = true;
       enableNushellIntegration = true;
     };
 
-    home.sessionVariables.DIRENV_LOG_FORMAT = ""; # Blank so direnv will shut up
+    sessionVariables.DIRENV_LOG_FORMAT = ""; # Blank so direnv will shut up
   };
 }
