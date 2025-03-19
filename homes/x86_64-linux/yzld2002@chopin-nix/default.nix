@@ -3,9 +3,10 @@
   pkgs,
   system,
   lib,
+  home,
   ...
 }: {
-    homes.packages = with pkgs; [
+    home.packages = with pkgs; [
       fastfetch
       btop
     ];
