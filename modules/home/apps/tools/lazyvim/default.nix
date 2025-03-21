@@ -7,5 +7,5 @@ in {
     enable = mkBoolOpt false "Enable lazyvim";
   };
 
-  config = mkIf cfg.enable { home.packages = [ pkgs.custom.lazyvim ]; };
+  config = mkIf cfg.enable { home.packages = [ pkgs.nvim ]; };
 }
