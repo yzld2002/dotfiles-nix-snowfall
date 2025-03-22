@@ -17,7 +17,7 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    nvim.url = "github:yzld2002/nixcats-nvim-lazyvim-config"
+    nvim.url = "github:yzld2002/nixcats-nvim-lazyvim-config";
     nvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
