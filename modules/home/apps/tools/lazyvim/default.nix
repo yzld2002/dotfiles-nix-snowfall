@@ -9,6 +9,6 @@ in {
   };
 
   config = mkIf cfg.enable { 
-    home.packages = [ pkgs.nvim ]; 
+    home.packages = [ inputs.nixcats-nvim-lazyvim-config.packages.${pkgs.system}.nvim ]; 
   };
 }
