@@ -112,6 +112,42 @@
         "type": "github"
       }
     },
+    "nixCats": {
+      "locked": {
+        "lastModified": 1742187708,
+        "narHash": "sha256-HDronkzKL0C1+3/f1iM6/dwd0VAL3cFq/lxpW1UGxZU=",
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "rev": "ac8df12bb7e61dd33e0dce07a8bb6409b08bbace",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "type": "github"
+      }
+    },
+    "nixcats-nvim-lazyvim-config": {
+      "inputs": {
+        "nixCats": "nixCats",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1742657350,
+        "narHash": "sha256-lDpUWOI3LIhPCyaWB6sz8HI+csrzr7eeiNaz5gH8e2A=",
+        "owner": "yzld2002",
+        "repo": "nixcats-nvim-lazyvim-config",
+        "rev": "25f95060692ebe5c3f034de6b57ef0e1f1b64a9f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yzld2002",
+        "repo": "nixcats-nvim-lazyvim-config",
+        "type": "github"
+      }
+    },
     "nixlib": {
       "locked": {
         "lastModified": 1736643958,
@@ -185,6 +221,7 @@
         "disko": "disko",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
+        "nixcats-nvim-lazyvim-config": "nixcats-nvim-lazyvim-config",
         "nixos-generators": "nixos-generators",
         "nixpkgs": "nixpkgs_2",
         "snowfall-lib": "snowfall-lib"

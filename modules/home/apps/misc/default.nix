@@ -1,13 +1,7 @@
-{
-  options,
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ options, config, pkgs, lib, ... }:
 with lib;
-with lib.custom; let
-  cfg = config.apps.misc;
+with lib.custom;
+let cfg = config.apps.misc;
 in {
   options.apps.misc = with types; {
     enable = mkBoolOpt false "Enable or disable misc apps";
@@ -27,6 +21,7 @@ in {
       unzip
       sshfs
       btop
+      fastfetch
     ];
   };
 }
