@@ -15,6 +15,7 @@ in {
       shellAliases = {
         ls = "eza";
         lz = "lazygit";
+        vim = "nvim";
       };
     };
 

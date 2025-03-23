@@ -1,13 +1,7 @@
-{
-  options,
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ options, config, lib, pkgs, ... }:
 with lib;
-with lib.custom; let
-  cfg = config.apps.tools.direnv;
+with lib.custom;
+let cfg = config.apps.tools.direnv;
 in {
   options.apps.tools.direnv = with types; {
     enable = mkBoolOpt false "Enable Direnv";
@@ -20,8 +14,6 @@ in {
         nix-direnv.enable = true;
       };
     };
-    home.sessionVariables = {
-      DIRENV_LOG_FORMAT = "";
-    };
+    home.sessionVariables = { DIRENV_LOG_FORMAT = ""; };
   };
 }
