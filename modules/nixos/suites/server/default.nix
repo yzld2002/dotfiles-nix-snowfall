@@ -1,4 +1,4 @@
-{ options, config, lib, pkgs, ... }:
+{ options, config, lib, pkgs, inputs, ... }:
 with lib;
 with lib.custom;
 let cfg = config.suites.server;
@@ -9,7 +9,11 @@ in {
 
   config = mkIf cfg.enable {
     programs.dconf.enable = true;
-    environment.systemPackages = with pkgs; [ custom.sys gnumake ];
+    environment.systemPackages = with pkgs; [
+      custom.sys
+      gnumake
+      inputs.agenix.packages.${pkgs.system}.default
+    ];
 
     system = {
       nix.enable = true;
