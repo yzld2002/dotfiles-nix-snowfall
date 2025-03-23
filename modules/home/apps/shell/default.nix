@@ -8,18 +8,29 @@ in {
   };
 
   config = mkIf cfg.enable {
-
-    programs.zoxide.enable = true;
-
     programs.zsh = {
       enable = true;
-      enableCompletion = true;
+      oh-my-zsh = { enable = true; };
       shellAliases = {
         ls = "eza";
         lz = "lazygit";
       };
     };
 
-    programs.starship.enable = true;
+    programs.starship = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    programs.zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    programs.eza = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
   };
 }

@@ -46,6 +46,7 @@ in {
       inherit (cfg) name initialPassword;
       home = "/home/${cfg.name}";
       group = "users";
+      shell = pkgs.zsh;
 
       extraGroups = [
         "wheel"
