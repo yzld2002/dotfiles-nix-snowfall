@@ -3,8 +3,8 @@ with lib;
 with lib.custom;
 let cfg = config.apps.tools.git;
 in {
-  options.apps.tools.direnv = with types; {
-    enable = mkBoolOpt false "Enable Direnv";
+  options.apps.tools.git = with types; {
+    enable = mkBoolOpt false "Enable git and its related tools";
   };
 
   config = mkIf cfg.enable {
