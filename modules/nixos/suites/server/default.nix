@@ -9,7 +9,7 @@ in {
 
   config = mkIf cfg.enable {
     programs.dconf.enable = true;
-    environment.systemPackages = [ pkgs.custom.sys ];
+    environment.systemPackages = with pkgs; [ custom.sys gnumake ];
 
     system = {
       nix.enable = true;
