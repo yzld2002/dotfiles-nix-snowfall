@@ -1,13 +1,7 @@
-{
-  options,
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ options, config, lib, pkgs, ... }:
 with lib;
-with lib.custom; let
-  cfg = config.suites.gui;
+with lib.custom;
+let cfg = config.suites.gui;
 in {
   options.suites.gui = with types; {
     enable = mkBoolOpt false "Enable the gui suite";
@@ -15,7 +9,6 @@ in {
 
   config = mkIf cfg.enable {
     system.nix.enable = true;
-    system.security.doas.enable = true;
 
     hardware.audio.enable = true;
     hardware.networking.enable = true;
@@ -35,7 +28,7 @@ in {
     services.ssh.enable = true;
     programs.dconf.enable = true;
 
-    environment.systemPackages = [pkgs.bluetuith pkgs.custom.sys];
+    environment.systemPackages = [ pkgs.bluetuith pkgs.custom.sys ];
 
     system = {
       fonts.enable = true;
