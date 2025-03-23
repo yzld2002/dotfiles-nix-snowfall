@@ -43,7 +43,7 @@
 
       systems.modules.nixos = with inputs; [
         disko.nixosModules.disko
-        agenix.nixosModules.agenix
+        agenix.nixosModules.default
       ];
 
       homes.modules = with inputs; [ ];
