@@ -8,7 +8,10 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.sessionVariables = { TERM = "xterm"; };
+    home.sessionVariables = {
+      TERM = "xterm";
+      EDITOR = "nvim";
+    };
     programs.zsh = {
       enable = true;
       oh-my-zsh = { enable = true; };
