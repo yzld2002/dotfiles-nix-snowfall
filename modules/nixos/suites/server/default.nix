@@ -8,16 +8,14 @@ in {
   };
 
   config = mkIf cfg.enable {
-    system.nix.enable = true;
-
-    services.ssh.enable = true;
     programs.dconf.enable = true;
-
     environment.systemPackages = [ pkgs.custom.sys ];
 
     system = {
+      nix.enable = true;
       locale.enable = true;
       time.enable = true;
     };
+    services.ssh.enable = true;
   };
 }

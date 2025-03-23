@@ -8,6 +8,7 @@ in {
   };
 
   config = mkIf cfg.enable {
+    home.stateVersion = "24.05";
     home.packages = with pkgs; [
       # Development
       git

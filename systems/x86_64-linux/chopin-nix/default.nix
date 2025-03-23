@@ -15,6 +15,8 @@
   networking.defaultGateway = "192.168.50.1";
   networking.nameservers = [ "192.168.50.1" ];
 
+  services.qemuGuest.enable = true;
+
   # ======================== DO NOT CHANGE THIS ========================
   system.stateVersion = "24.05";
   # ======================== DO NOT CHANGE THIS ========================
