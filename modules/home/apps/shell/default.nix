@@ -1,7 +1,7 @@
 { options, config, lib, pkgs, inputs, ... }:
 with lib;
 with lib.custom;
-let cfg = config.apps.editor.lazyvim;
+let cfg = config.apps.shell;
 in {
   options.apps.shell = with types; {
     enable = mkBoolOpt false "Enable zsh and its friends";
