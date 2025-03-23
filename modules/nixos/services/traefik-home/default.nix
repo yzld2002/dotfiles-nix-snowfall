@@ -19,8 +19,8 @@ in {
               tls = {
                 certResolver = "cloudflare";
                 domains = [{
-                  main = "yzld2002.cn";
-                  sans = [ "*.yzld2002.cn" ];
+                  main = "20190915.xyz";
+                  sans = [ "*.20190915.xyz" ];
                 }];
               };
             };
