@@ -21,6 +21,7 @@ in {
       sshfs
       btop
       fastfetch
+      comma
     ];
   };
 }
