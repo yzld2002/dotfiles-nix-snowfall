@@ -13,6 +13,7 @@
     nixos-generators.url = "github:nix-community/nixos-generators";
     nixos-generators.inputs.nixpkgs.follows = "nixpkgs";
     disko.url = "github:nix-community/disko";
+    agenix.url = "github:ryantm/agenix";
 
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +41,10 @@
 
       overlays = with inputs; [ ];
 
-      systems.modules.nixos = with inputs; [ disko.nixosModules.disko ];
+      systems.modules.nixos = with inputs; [
+        disko.nixosModules.disko
+        agenix.nixosModules.agenix
+      ];
 
       homes.modules = with inputs; [ ];
 
