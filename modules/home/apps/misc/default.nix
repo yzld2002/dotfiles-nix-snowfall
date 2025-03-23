@@ -13,8 +13,6 @@ in {
       # Development
       git
       git-remote-gcrypt
-      bat
-      eza
       fzf
       fd
 
