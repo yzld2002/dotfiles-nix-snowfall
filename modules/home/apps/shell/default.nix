@@ -8,6 +8,7 @@ in {
   };
 
   config = mkIf cfg.enable {
+    home.sessionVariables = { TERM = "xterm"; };
     programs.zsh = {
       enable = true;
       oh-my-zsh = { enable = true; };
