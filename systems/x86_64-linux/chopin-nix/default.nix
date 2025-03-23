@@ -14,6 +14,20 @@
   }];
   networking.defaultGateway = "192.168.50.1";
   networking.nameservers = [ "192.168.50.1" ];
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 80 443 ];
+    allowedUDPPortRanges = [
+      {
+        from = 4000;
+        to = 4007;
+      }
+      {
+        from = 8000;
+        to = 8010;
+      }
+    ];
+  };
 
   services.qemuGuest.enable = true;
   services.traefik-home.enable = true;
