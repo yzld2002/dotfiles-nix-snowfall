@@ -47,6 +47,7 @@ in {
       home = "/home/${cfg.name}";
       group = "users";
       shell = pkgs.zsh;
+      ignoreShellProgramCheck = true;
 
       extraGroups = [
         "wheel"
