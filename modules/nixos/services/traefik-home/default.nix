@@ -32,7 +32,11 @@ in {
             acme = {
               email = "yzld2002@gmail.com";
               storage = "/var/lib/traefik/acme.json";
-              dnsChallenge = { provider = "cloudflare"; };
+              dnsChallenge = {
+                provider = "cloudflare";
+                disablePropagationCheck = true;
+                delayBeforeCheck = 60;
+              };
             };
           };
         };
