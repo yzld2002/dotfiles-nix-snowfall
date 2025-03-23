@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 with lib;
-let cfg = config.services.traefik;
+let cfg = config.services.traefik-home;
 in {
-  options.services.traefik = {
+  options.services.traefik-home = {
     enable = mkEnableOption "Traefik reverse proxy";
   };
   config = mkIf cfg.enable {
