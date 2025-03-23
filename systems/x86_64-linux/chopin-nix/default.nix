@@ -13,6 +13,7 @@
     prefixLength = 24;
   }];
   networking.defaultGateway = "192.168.50.1";
+  networking.nameservers = [ "192.168.50.1" ];
 
   # ======================== DO NOT CHANGE THIS ========================
   system.stateVersion = "24.05";
