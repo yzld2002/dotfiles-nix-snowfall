@@ -9,7 +9,7 @@ in {
     services.traefik = {
       enable = true;
       environmentFiles = [ "${config.age.secrets.cloudflare-dns.path}" ];
-      group = "docker";
+      # group = "docker";
       staticConfigOptions = {
         api = { dashboard = true; };
         entryPoints = {
@@ -36,7 +36,7 @@ in {
             };
           };
         };
-        providers = { docker = { }; };
+        # providers = { docker = { }; };
         # providers = {
         #   kubernetesIngress = {
         #     endpoint = "https://127.0.0.1:6443";
