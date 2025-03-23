@@ -21,5 +21,6 @@ in {
       time.enable = true;
     };
     services.ssh.enable = true;
+    services.agenix.enable = true;
   };
 }
