@@ -22,5 +22,8 @@ in {
     };
     services.ssh.enable = true;
     services.agenix.enable = true;
+    # Docker
+    virtualisation.docker.enable = true;
+    users.users.yzld2002.extraGroups = [ "docker" ];
   };
 }
