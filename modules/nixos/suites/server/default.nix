@@ -13,6 +13,7 @@ in {
       custom.sys
       gnumake
       inputs.agenix.packages.${pkgs.system}.default
+      compose2nix
     ];
 
     system = {
