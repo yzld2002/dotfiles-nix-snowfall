@@ -32,6 +32,7 @@
   services.qemuGuest.enable = true;
   services.traefik-home.enable = true;
   services.vaultwarden-home.enable = true;
+  services.dockers.obsidian-livesync-couchdb.enable = true;
 
   # ======================== DO NOT CHANGE THIS ========================
   system.stateVersion = "24.05";
