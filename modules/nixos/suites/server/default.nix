@@ -23,7 +23,11 @@ in {
     services.ssh.enable = true;
     services.agenix.enable = true;
     # Docker
-    virtualisation.docker.enable = true;
+    virtualisation.docker = {
+      enable = true;
+      autoPrune.enable = true;
+    };
+    virtualisation.oci-containers.backend = "docker";
     users.users.yzld2002.extraGroups = [ "docker" ];
   };
 }
