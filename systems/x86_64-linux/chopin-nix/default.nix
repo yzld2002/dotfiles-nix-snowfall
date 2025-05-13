@@ -16,7 +16,7 @@
   networking.nameservers = [ "192.168.50.1" ];
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 80 443 ];
+    allowedTCPPorts = [ 80 443 3000 ];
     allowedUDPPortRanges = [
       {
         from = 4000;
