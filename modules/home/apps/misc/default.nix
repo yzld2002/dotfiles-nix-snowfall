@@ -11,10 +11,9 @@ in {
     home.stateVersion = "24.05";
     home.packages = with pkgs; [
       # Development
-      git
-      git-remote-gcrypt
       fzf
       fd
+      devbox
 
       # Util
       unzip
