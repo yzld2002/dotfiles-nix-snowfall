@@ -14,6 +14,7 @@ in {
       fzf
       fd
       devbox
+      hurl
 
       # Util
       unzip
