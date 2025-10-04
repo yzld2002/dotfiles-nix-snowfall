@@ -27,7 +27,7 @@ in {
     desktop.kde.enable = true;
 
     system = {
-      fonts.enable = true;
+      # fonts.enable = true;
       locale.enable = true;
       time.enable = true;
     };

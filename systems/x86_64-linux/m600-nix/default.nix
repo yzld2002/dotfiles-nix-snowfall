@@ -1,14 +1,15 @@
 { pkgs, modulesPath, ... }: {
   imports =
-    [ (modulesPath + "/profiles/qemu-guest.nix") ./hardware.nix ./disk.nix ];
+    [ ./hardware.nix ./disk.nix ];
 
   # Enable Bootloader
   system.boot.efi.enable = true;
 
   suites.server.enable = true;
+  suites.gui.enable = true;
 
-  networking.interfaces.ens18.useDHCP = false;
-  networking.interfaces.ens18.ipv4.addresses = [{
+  networking.interfaces.wlp4s0.useDHCP = false;
+  networking.interfaces.wlp4s0.ipv4.addresses = [{
     address = "192.168.50.20";
     prefixLength = 24;
   }];
