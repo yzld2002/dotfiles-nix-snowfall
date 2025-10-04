@@ -42,7 +42,7 @@ in {
         "traefik.http.services.obsidian-livesync.loadbalancer.server.port" =
           "5984";
       };
-      user = "1001:100";
+      user = "1000:100";
       log-driver = "journald";
       extraOptions = [
         "--network-alias=couchdb"
