@@ -3,5 +3,6 @@
   apps.shell.enable = true;
   apps.tools.direnv.enable = true;
   apps.tools.git.enable = true;
-  apps.editor.lazyvim.enable = true;
+  apps.editor.lazyvim.enable = false;
+  apps.editor.nvf.enable = true;
 }
