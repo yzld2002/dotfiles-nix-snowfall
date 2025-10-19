@@ -19,13 +19,12 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    nixcats-nvim-lazyvim-config.url =
-      "github:yzld2002/nixcats-nvim-lazyvim-config";
+    nixcats-nvim-lazyvim-config.url = "github:yzld2002/nixcats-nvim-lazyvim-config";
     nixcats-nvim-lazyvim-config.inputs.nixpkgs.follows = "nixpkgs";
 
     # nvf
     nvf = {
-      url = "github:NotAShelf/nvf";
+      url = "github:NotAShelf/nvf/v0.8";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -44,9 +43,9 @@
         namespace = "custom";
       };
 
-      channels-config = { allowUnfree = true; };
+      channels-config = {allowUnfree = true;};
 
-      overlays = with inputs; [ ];
+      overlays = with inputs; [];
 
       systems.modules.nixos = with inputs; [
         disko.nixosModules.disko
@@ -57,6 +56,6 @@
         nvf.homeManagerModules.default
       ];
 
-      templates = import ./templates { };
+      templates = import ./templates {};
     };
 }
