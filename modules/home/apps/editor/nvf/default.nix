@@ -60,7 +60,7 @@ with lib.custom; let
     {
       key = "<leader>e";
       mode = ["n"];
-      action = ":Neotree<CR>";
+      action = ":Neotree toggle<CR>";
       desc = "Neotree";
     }
   ];
