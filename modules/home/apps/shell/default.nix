@@ -1,7 +1,11 @@
-{ options, config, lib, pkgs, inputs, ... }:
+{
+  config,
+  lib,
+  ...
+}:
 with lib;
-with lib.custom;
-let cfg = config.apps.shell;
+with lib.custom; let
+  cfg = config.apps.shell;
 in {
   options.apps.shell = with types; {
     enable = mkBoolOpt false "Enable zsh and its friends";
@@ -12,30 +16,37 @@ in {
       TERM = "xterm";
       EDITOR = "nvim";
     };
-    programs.zsh = {
-      enable = true;
-      oh-my-zsh = { enable = true; };
-      shellAliases = {
-        ls = "eza";
-        lz = "lazygit";
-        vim = "nvim";
+    programs = {
+      zsh = {
+        enable = true;
+        enableCompletions = true;
+        autosuggestions.enable = true;
+        syntaxHighlighting.enable = true;
+        oh-my-zsh = {
+          enable = true;
+          plugins = ["git" "thefuck"];
+        };
+        shellAliases = {
+          ls = "eza";
+          lz = "lazygit";
+          vim = "nvim";
+        };
+      };
+
+      starship = {
+        enable = true;
+        enableZshIntegration = true;
+      };
+
+      zoxide = {
+        enable = true;
+        enableZshIntegration = true;
+      };
+
+      eza = {
+        enable = true;
+        enableZshIntegration = true;
       };
     };
-
-    programs.starship = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
-    programs.zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
-    programs.eza = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
   };
 }
