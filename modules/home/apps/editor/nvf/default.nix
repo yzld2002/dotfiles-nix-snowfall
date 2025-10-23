@@ -14,6 +14,12 @@ with lib.custom; let
       desc = "files";
     }
     {
+      key = "<leader> ";
+      mode = ["n"];
+      action = ":FzfLua files<CR>";
+      desc = "files";
+    }
+    {
       key = "<leader>fg";
       mode = ["n"];
       action = ":FzfLua git_files<CR>";
