@@ -20,7 +20,7 @@ in {
       zsh = {
         enable = true;
         enableCompletions = true;
-        autosuggestions.enable = true;
+        autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
         oh-my-zsh = {
           enable = true;
