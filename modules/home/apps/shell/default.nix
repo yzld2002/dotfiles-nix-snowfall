@@ -19,7 +19,7 @@ in {
     programs = {
       zsh = {
         enable = true;
-        enableCompletions = true;
+        enableCompletion = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
         oh-my-zsh = {
