@@ -107,8 +107,15 @@ in {
           };
           git.enable = true;
           terminal = {
-            toggleterm.enable = true;
-            toggleterm.lazygit.enable = true;
+            toggleterm = {
+              enable = true;
+              lazygit.enable = true;
+              mappings.open = "<leader>t";
+              setupOpts = {
+                insert_mappings = true;
+                terminal_mappings = true;
+              };
+            };
           };
           lsp = {
             enable = true;
