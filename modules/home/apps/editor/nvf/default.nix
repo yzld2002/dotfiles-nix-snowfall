@@ -91,7 +91,10 @@ in {
           filetree.neo-tree.enable = true;
           viAlias = false;
           vimAlias = true;
-          utility.sleuth.enable = true;
+          utility = {
+            sleuth.enable = true;
+            smart-splits.enable = true;
+          };
           clipboard = {
             enable = true;
             providers.wl-copy.enable = true;
