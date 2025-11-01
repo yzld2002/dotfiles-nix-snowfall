@@ -6,70 +6,6 @@
 with lib;
 with lib.custom; let
   cfg = config.apps.editor.nvf;
-  fzfLuaKeymap = [
-    {
-      key = "<leader>ff";
-      mode = ["n"];
-      action = ":FzfLua files<CR>";
-      desc = "files";
-    }
-    {
-      key = "<leader> ";
-      mode = ["n"];
-      action = ":FzfLua files<CR>";
-      desc = "files";
-    }
-    {
-      key = "<leader>fg";
-      mode = ["n"];
-      action = ":FzfLua git_files<CR>";
-      desc = "git files";
-    }
-    {
-      key = "<leader>gs";
-      mode = ["n"];
-      action = ":FzfLua git_diff<CR>";
-      desc = "git files";
-    }
-    {
-      key = "<leader>fb";
-      mode = ["n"];
-      action = ":FzfLua buffers<CR>";
-      desc = "buffers";
-    }
-    {
-      key = "<leader>sg";
-      mode = ["n"];
-      action = ":FzfLua grep<CR>";
-      desc = "Pick - Live Grep";
-    }
-    {
-      key = "<leader>sw";
-      mode = ["n"];
-      action = ":FzfLua grep_cword<CR>";
-      desc = "Pick - Grep word under cursor";
-    }
-    {
-      key = "<leader>sw";
-      mode = ["v"];
-      action = ":FzfLua grep_cword<CR>";
-      desc = "Pick - Grep word under cursor";
-    }
-    {
-      key = "<leader>sr";
-      mode = ["n"];
-      action = ":FzfLua resume<CR>";
-      desc = "Resume";
-    }
-  ];
-  neotreeKeymap = [
-    {
-      key = "<leader>e";
-      mode = ["n"];
-      action = ":Neotree toggle<CR>";
-      desc = "Neotree";
-    }
-  ];
 in {
   options.apps.editor.nvf = with types; {
     enable = mkBoolOpt false "Enable nvf based neovim";
@@ -94,6 +30,7 @@ in {
           utility = {
             sleuth.enable = true;
             smart-splits.enable = true;
+            snacks-nvim.enable = true;
           };
           clipboard = {
             enable = true;
@@ -104,11 +41,13 @@ in {
           binds.whichKey = {
             enable = true;
           };
+
           fzf-lua = {
             enable = true;
             profile = "telescope";
           };
           git.enable = true;
+
           terminal = {
             toggleterm = {
               enable = true;
@@ -120,6 +59,7 @@ in {
               };
             };
           };
+
           lsp = {
             enable = true;
             formatOnSave = true;
