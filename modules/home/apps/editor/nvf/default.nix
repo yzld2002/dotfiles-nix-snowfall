@@ -92,7 +92,7 @@ in {
           };
 
           # keymaps
-          keymaps = fzfLuaKeymap ++ neotreeKeymap;
+          keymaps = import ./keymaps/keymaps.nix;
         };
       };
     };
