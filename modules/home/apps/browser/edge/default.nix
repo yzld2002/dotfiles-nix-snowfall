@@ -8,9 +8,9 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.pkgs = with pkgs {
+    home.packages = with pkgs; [
       microsoft-edge
-    };
+    ];
     home.sessionVariables = { NIXOS_OZONE_WL = "1"; };
   };
 }
