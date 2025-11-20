@@ -1,12 +1,14 @@
-{ config, lib, pkgs, ... }:
-with lib; let
-  cfg = config.desktop.fonts;
-in
-{
+{ options, config, lib, pkgs, ... }:
+with lib;
+with lib.custom;
+let cfg = config.desktop.kde;
+in {
+  options.desktop.fonts = with types; { enable = mkBoolOpt false "Enable fonts config"; };
   config = mkIf cfg.enable {
     fonts = {
       packages = with pkgs; [
-        nerdfonts
+        nerd-fonts.noto
+        nerd-fonts.caskaydia-cove
         twemoji-color-font
         sarasa-gothic
       ];
