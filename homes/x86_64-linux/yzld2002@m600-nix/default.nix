@@ -12,4 +12,5 @@
   apps.tools.zellij.enable = true;
   apps.editor.lazyvimnix.enable = true;
   apps.browser.edge.enable = true;
+  apps.terminal.ghostty.enable = true;
 }

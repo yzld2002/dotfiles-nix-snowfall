@@ -24,7 +24,7 @@ in {
         syntaxHighlighting.enable = true;
         oh-my-zsh = {
           enable = true;
-          plugins = ["git" "thefuck"];
+          plugins = ["git"];
         };
         shellAliases = {
           ls = "eza";
