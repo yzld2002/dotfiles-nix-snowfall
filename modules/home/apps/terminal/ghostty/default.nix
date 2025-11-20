@@ -19,8 +19,15 @@ in {
         settings = {
           theme = "Catppuccin Mocha";
           font-family = "CaskaydiaCove Nerd Font Mono";
-          font-size = 12;
-          keybind = "cmd+t=unbind";
+          font-size = 10;
+          keybind = [
+            "cmd+t=unbind"
+            "cmd+n=unbind"
+            "cmd+c=unbind"
+            "cmd+w=unbind"
+            "cmd+opt+left=unbind"
+            "cmd+opt+right=unbind"
+          ];
         };
       };
     };
