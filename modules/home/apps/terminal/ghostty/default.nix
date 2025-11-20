@@ -19,7 +19,7 @@ in {
         settings = {
           theme = "Catppuccin Mocha";
           font-family = "CaskaydiaCove Nerd Font Mono";
-          font-size = 10;
+          font-size = 12;
           keybind = [
             "cmd+t=unbind"
             "cmd+n=unbind"

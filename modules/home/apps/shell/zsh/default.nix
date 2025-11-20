@@ -5,9 +5,9 @@
 }:
 with lib;
 with lib.custom; let
-  cfg = config.apps.shell;
+  cfg = config.apps.shell.zsh;
 in {
-  options.apps.shell = with types; {
+  options.apps.shell.zsh = with types; {
     enable = mkBoolOpt false "Enable zsh and its friends";
   };
 

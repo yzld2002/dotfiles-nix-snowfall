@@ -6,7 +6,7 @@
   ...
 }: {
   apps.misc.enable = true;
-  apps.shell.enable = true;
+  apps.shell.zsh.enable = true;
   apps.tools.direnv.enable = true;
   apps.tools.git.enable = true;
   apps.tools.zellij.enable = true;
