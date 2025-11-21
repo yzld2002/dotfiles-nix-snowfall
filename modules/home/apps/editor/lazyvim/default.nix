@@ -5,10 +5,10 @@
 }:
 with lib;
 with lib.custom; let
-  cfg = config.apps.editor.lazyvimnix;
+  cfg = config.apps.editor.lazyvim;
 in {
-  options.apps.editor.lazyvimnix = with types; {
-    enable = mkBoolOpt false "Enable lazyvimnix";
+  options.apps.editor.lazyvim= with types; {
+    enable = mkBoolOpt false "Enable lazyvim";
   };
 
   config = mkIf cfg.enable {
