@@ -27,7 +27,7 @@ in {
           plugins = ["git"];
         };
         shellAliases = {
-          ls = "eza";
+          ls = "eza --color=always --icons --group-directories-first";
           lz = "lazygit";
           vim = "nvim";
         };
