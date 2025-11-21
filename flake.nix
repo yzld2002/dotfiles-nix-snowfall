@@ -19,15 +19,6 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     lazyvim.url = "github:pfassina/lazyvim-nix";
-
-    nixcats-nvim-lazyvim-config.url = "github:yzld2002/nixcats-nvim-lazyvim-config";
-    nixcats-nvim-lazyvim-config.inputs.nixpkgs.follows = "nixpkgs";
-
-    # nvf
-    nvf = {
-      url = "github:NotAShelf/nvf/v0.8";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs:
@@ -54,7 +45,6 @@
       ];
 
       homes.modules = with inputs; [
-        nvf.homeManagerModules.default
         lazyvim.homeManagerModules.default
       ];
 
