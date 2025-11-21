@@ -15,5 +15,6 @@ in {
       userEmail = "yzld2002@gmail.com";
       userName = "yzld2002";
     };
+    programs.gh.enable = true;
   };
 }
