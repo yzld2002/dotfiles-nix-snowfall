@@ -1,7 +1,7 @@
 { options, config, lib, pkgs, ... }:
 with lib;
 with lib.custom;
-let cfg = config.desktop.kde;
+let cfg = config.desktop.fonts;
 in {
   options.desktop.fonts = with types; { enable = mkBoolOpt false "Enable fonts config"; };
   config = mkIf cfg.enable {
