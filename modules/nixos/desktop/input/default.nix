@@ -6,9 +6,15 @@ let cfg = config.desktop.input;
 in {
   options.desktop.input = with types; { enable = mkBoolOpt false "Enable Fcitx Input Method"; };
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      kdePackages.fcitx5-with-addons
-      kdePackages.fcitx5-chinese-addons
-    ];
+    i18n.inputMethod = {
+      type = "fcitx5";
+      enable = true;
+      fcitx5.addons = with pkgs; [
+        fcitx5-chinese-addons
+        fcitx5-gtk
+        catppuccin-fcitx5
+      ];
+      fcitx5.waylandFrontend = true;
+    };
   };
 }
