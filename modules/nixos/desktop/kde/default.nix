@@ -32,6 +32,7 @@ in {
         vlc # Cross-platform media player and streaming server
         wayland-utils # Wayland utilities
         wl-clipboard # Command-line copy/paste utilities for Wayland
+        kdePackages.krohnkite
       ];
   };
 }
