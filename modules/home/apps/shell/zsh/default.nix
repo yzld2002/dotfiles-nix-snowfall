@@ -5,9 +5,9 @@
 }:
 with lib;
 with lib.custom; let
-  cfg = config.apps.shell;
+  cfg = config.apps.shell.zsh;
 in {
-  options.apps.shell = with types; {
+  options.apps.shell.zsh = with types; {
     enable = mkBoolOpt false "Enable zsh and its friends";
   };
 
@@ -24,10 +24,10 @@ in {
         syntaxHighlighting.enable = true;
         oh-my-zsh = {
           enable = true;
-          plugins = ["git" "thefuck"];
+          plugins = ["git"];
         };
         shellAliases = {
-          ls = "eza";
+          ls = "eza --color=always --icons --group-directories-first";
           lz = "lazygit";
           vim = "nvim";
         };

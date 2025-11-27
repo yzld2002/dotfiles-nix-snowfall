@@ -25,6 +25,9 @@ in {
 
     programs.dconf.enable = true;
     desktop.kde.enable = true;
+    desktop.fonts.enable = true;
+    desktop.input.enable = true;
+    desktop.softwares.enable = true;
 
     system = {
       # fonts.enable = true;

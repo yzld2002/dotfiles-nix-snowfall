@@ -8,8 +8,8 @@
   suites.server.enable = true;
   suites.gui.enable = true;
 
-  networking.interfaces.wlp4s0.useDHCP = false;
-  networking.interfaces.wlp4s0.ipv4.addresses = [{
+  networking.interfaces.wlp3s0.useDHCP = false;
+  networking.interfaces.wlp3s0.ipv4.addresses = [{
     address = "192.168.50.20";
     prefixLength = 24;
   }];
