@@ -32,6 +32,10 @@ http:
       rule: "Host(`vaultwarden.20190915.xyz`)"
       entryPoints: "https"
       service: vaultwarden-service
+    gitea:
+      rule: "Host(`gitea.20190915.xyz`)"
+      entryPoints: "https"
+      service: gitea-service
 
   services:
     lede-service:
@@ -62,3 +66,7 @@ http:
       loadBalancer:
         servers:
           - url: "http://192.168.50.21:8000"
+    gitea-service:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.50.230:3000"
