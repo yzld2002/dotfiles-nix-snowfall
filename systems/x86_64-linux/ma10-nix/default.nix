@@ -31,6 +31,7 @@
 
   services.qemuGuest.enable = true;
   services.traefik-home.enable = true;
+  services.atuin-home.enable = true;
   services.vaultwarden-home.enable = true;
   services.dockers.obsidian-livesync-couchdb.enable = true;
 
